@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Kumar S M - Unreal Developer & Content Creator</title>
+    <style>
+        /* Modern Portfolio Black & Neon Red Theme */
+        :root {
+            --bg-dark: #050505;    /* Deep Black */
+            --bg-card: #141414;    /* Sleek Dark Grey for cards */
+            --text-main: #ffffff;  /* Pure White text */
+            --text-muted: #a0a0a0; /* Grey text for paragraphs */
+            --primary: #ff003c;    /* Cyberpunk Neon Red */
+            --accent: #ff4d4d;     /* Lighter Red for gradients */
+            --youtube-red: #ff0000;
+            --transition: all 0.3s ease;
+        }
+
+        /* Base Setup with full-page centering */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(5, 5, 5, 0.9); /* Darkened nav bar */
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 0, 60, 0.2); /* Subtle red border */
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            text-shadow: 0 0 10px rgba(255, 0, 60, 0.5); /* Neon glow effect */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+            text-shadow: 0 0 8px rgba(255, 0, 60, 0.6); /* Neon hover glow */
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 5% 60px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+        }
+
+        p {
+            max-width: 800px;
+            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        /* Hero Section */
+        #hero {
+            background: radial-gradient(circle at top right, var(--bg-card), var(--bg-dark));
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        /* Button Group */
+        .button-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 0, 60, 0.2); /* Base glow */
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 0, 60, 0.6); /* Strong neon glow on hover */
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--text-muted);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: transparent;
+            box-shadow: 0 0 15px rgba(255, 0, 60, 0.3);
+        }
+
+        /* YouTube Button Style */
+        .btn-youtube {
+            background: var(--youtube-red);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-youtube:hover {
+            background: #cc0000;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            max-width: 1000px;
+        }
+
+        .skill-tag {
+            background: var(--bg-card);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 0, 60, 0.3); /* Subtle red border */
+            color: var(--text-main);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .skill-tag:hover {
+            background: rgba(255, 0, 60, 0.1);
+            border-color: var(--primary);
+            box-shadow: 0 0 10px rgba(255, 0, 60, 0.4);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1000px;
+            justify-content: center;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            text-align: left;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(255, 0, 60, 0.2); /* Neon glow shadow */
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            margin-left: 0;
+            max-width: 100%;
+        }
+
+        .project-card ul {
+            list-style-position: inside;
+            color: var(--text-muted);
+        }
+
+        /* Contact Details Card & Profile Photo */
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 20px rgba(255, 0, 60, 0.4); /* Glowing picture border */
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            background-color: var(--bg-card);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .contact-item {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item strong {
+            color: var(--primary);
+            margin-right: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-card);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            .button-group { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#hero" class="logo">Sanjay Kumar S M</a>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section id="hero">
+            <h1 class="hero-title">Hi, I'm SANJAY KUMAR S M</h1>
+            <h2 class="hero-subtitle">Unreal Developer & Content Creator</h2>
+            <p>
+                I specialize in building immersive, high-quality maps and environments in Unreal Engine. From initial blockouts and greyboxing to final lighting and set dressing, I create worlds that are engaging to explore and optimized for performance.
+            </p>
+            
+            <div class="button-group">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="Sanjay resume.pdf" class="btn btn-secondary" target="_blank">My Resume</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>Technical Skills</h2>
+            <p>
+                With a strong focus on level design and environment art, I bring game worlds to life. I understand how to balance visual fidelity with gameplay flow, ensuring every map I create serves the player experience. 
+            </p>
+            <p>
+                <strong>Beyond development, I am a professional gamer and content creator streaming on YouTube.</strong> Playing and analyzing a wide variety of games gives me a unique, player-first perspective when designing levels.
+            </p>
+            <div class="skills-container">
+                <span class="skill-tag">Unreal Engine 5</span>
+                <span class="skill-tag">Cinematics</span>
+                <span class="skill-tag">Level Design</span>
+                <span class="skill-tag">Environment Art</span>
+                <span class="skill-tag">Lighting & Rendering</span>
+                <span class="skill-tag">Blueprints</span>
+                <span class="skill-tag">Content Creation</span>
+                <span class="skill-tag">Optimization</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>Third-Person Shooter</h3>
+                    <p><strong>Role: Unreal Developer & Level Designer</strong></p>
+                    <p>
+                        Designed and developed multiple combat maps for a fast-paced Third-Person Shooter. Collaborated with gameplay programmers to ensure environments supported core mechanics like cover and vertical movement.
+                    </p>
+                    <ul>
+                        <li>Built dynamic environments from blockout to final polish.</li>
+                        <li>Designed combat arenas to balance line-of-sight and strategic cover.</li>
+                        <li>Optimized lighting and asset placement to maintain steady framerates.</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <h3>Map Developer</h3>
+                    <p><strong>Role: Level Designer & Environment Artist</strong></p>
+                    <p>
+                        Developed various custom maps focusing on visual storytelling, atmospheric lighting, and seamless gameplay flow.
+                    </p>
+                    <ul>
+                        <li>Created dense, atmospheric environments utilizing Lumen for dynamic lighting.</li>
+                        <li>Integrated custom assets, materials, and established the overall visual mood.</li>
+                        <li>Iterated on level geometry based on playtesting and spatial constraints.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" style="min-height: 50vh;">
+            <h2>Let's Connect</h2>
+            <p>
+                I'm currently looking for new opportunities in Unreal Engine development and level design. Whether you have a project in mind, want to collaborate, or just want to chat games, my inbox is always open!
+            </p>
+            
+            <div class="profile-photo">
+                <img src="sanjay.jpg.png" alt="Sanjay Kumar S M" />
+            </div>
+
+            <div class="contact-card">
+                <p class="contact-item"><strong>Name:</strong> SANJAY KUMAR S M</p>
+                <p class="contact-item"><strong>Email:</strong> ssanjaykumarsm@gmail.com</p>
+                <p class="contact-item"><strong>Phone:</strong> +91 7560942995</p>
+            </div>
+
+            <div class="button-group" style="margin-top: 0rem;">
+                <a href="mailto:ssanjaykumarsm@gmail.com" class="btn">Send an Email</a>
+                
+                <a href="https://www.youtube.com/c/EdGaRGAMING-007" class="btn btn-youtube" target="_blank">▶ YouTube</a>
+
+                <a href="https://www.linkedin.com/in/sanjay-kumar070/" target="_blank" class="btn btn-secondary">
+                    <img src="linkedin.png.png" alt="" style="height: 1.2rem; margin-right: 0.5rem; vertical-align: middle; border-radius: 2px;"/>
+                    LinkedIn
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SANJAY KUMAR S M. Built with passion and code.</p>
+    </footer>
+
+</body>
+</html>
