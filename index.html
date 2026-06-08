@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sanjay Kumar SM — Entry-Level Unreal Engine Game Developer from Kerala, India. Specializing in UE5/6, C++, Blueprints, AI systems, and 3D level design." />
+  <meta name="keywords" content="Unreal Engine Developer, Game Developer, UE5, C++, Blueprints, Kerala, India, Sanjay Kumar" />
+  <title>Sanjay Kumar SM | Unreal Engine Game Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>SK<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Opportunities
+      </div>
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">
+        Sanjay Kumar<br/>
+        <span class="hero-lastname">SM</span>
+      </h1>
+      <div class="hero-title-wrap">
+        <span class="hero-title-static">Unreal Engine</span>
+        <span class="hero-title-dynamic" id="dynamicText"></span>
+        <span class="hero-cursor">|</span>
+      </div>
+      <p class="hero-desc">
+        Entry-Level Game Developer specializing in UE5/6, C++ & Blueprints.<br />
+        Creating immersive worlds with cutting-edge real-time technology.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">1+</span>
+          <span class="stat-label">Year Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">7+</span>
+          <span class="stat-label">Years Gaming</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">2+</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary" id="viewWorkBtn">
+          <span>View My Work</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-outline" id="hireBtn">Hire Me</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/sanjay-kumar070/" target="_blank" class="social-link" id="linkedinLink" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/_____sa_nj_ay_____/" target="_blank" class="social-link" id="instagramLink" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="mailto:ssanjaykumarsm@gmail.com" class="social-link" id="emailLink" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-card-3d">
+            <div class="card-inner">
+              <div class="avatar-container">
+                <div class="avatar-rings">
+                  <div class="ring ring-1"></div>
+                  <div class="ring ring-2"></div>
+                  <div class="ring ring-3"></div>
+                </div>
+                <div class="avatar-core">
+                  <span class="avatar-initials">SK</span>
+                </div>
+              </div>
+              <div class="about-card-info">
+                <h3>Sanjay Kumar SM</h3>
+                <p>Game Developer</p>
+                <div class="card-tags">
+                  <span>UE5 / UE6</span>
+                  <span>C++</span>
+                  <span>Blueprints</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="exp-badges">
+            <div class="exp-badge">
+              <span class="exp-num">4</span>
+              <span class="exp-text">Months<br/>Internship</span>
+            </div>
+            <div class="exp-badge red">
+              <span class="exp-num">7+</span>
+              <span class="exp-text">Years<br/>Gaming</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <h3 class="about-subtitle">Entry-Level Unreal Engine Developer</h3>
+          <p class="about-text">
+            I'm a passionate game developer with <strong>1 year of hands-on experience</strong> building gameplay systems 
+            and 3D environments using Unreal Engine 5 and 6. My expertise spans C++, Blueprints Visual Scripting, 
+            AI behavior systems, UI development, and level design.
+          </p>
+          <p class="about-text">
+            I completed a <strong>4-month internship at Malger Entertainments</strong>, where I worked on real-time 
+            game development projects — developing gameplay systems, interactive environments, and optimizing 
+            assets for performance. Beyond development, I bring <strong>7+ years of continuous gaming experience</strong>, 
+            giving me a deep understanding of gameplay mechanics and player behavior.
+          </p>
+
+          <div class="about-details">
+            <div class="detail-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Kerala, India</span>
+            </div>
+            <div class="detail-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>ssanjaykumarsm@gmail.com</span>
+            </div>
+            <div class="detail-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.26a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+              <span>+91 7560942995</span>
+            </div>
+            <div class="detail-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <span>YouTube Game Streamer</span>
+            </div>
+          </div>
+
+          <div class="about-langs">
+            <span class="lang-tag">Malayalam</span>
+            <span class="lang-tag">English</span>
+            <span class="lang-tag">Tamil</span>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">
+            <span>Let's Connect</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Expertise</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category" data-aos="fade-up">
+          <div class="skill-cat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Programming</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>C++</span><span>80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>OOP Principles</span><span>78%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="78"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-delay="100">
+          <div class="skill-cat-icon red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Game Development</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Unreal Engine 5/6</span><span>85%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Blueprints Visual Scripting</span><span>90%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Gameplay Systems</span><span>82%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="82"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-delay="200">
+          <div class="skill-cat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          </div>
+          <h3>AI & Systems</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Enemy AI (Detection/Chase/Attack)</span><span>80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Game Logic & Interaction</span><span>83%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="83"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-delay="300">
+          <div class="skill-cat-icon red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>UI Development</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>HUD & Health Bars</span><span>85%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Game Menus & UI</span><span>80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-delay="400">
+          <div class="skill-cat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Graphics & Level Design</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Lumen Lighting & Nanite</span><span>82%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="82"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Niagara VFX</span><span>70%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="70"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Environment & Level Design</span><span>88%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="88"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-delay="500">
+          <div class="skill-cat-icon red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Other Skills</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Debugging & Testing</span><span>80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Performance Optimization</span><span>75%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="75"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Badges -->
+      <div class="tech-badges">
+        <span class="tech-badge">Unreal Engine 5</span>
+        <span class="tech-badge">Unreal Engine 6</span>
+        <span class="tech-badge">C++</span>
+        <span class="tech-badge">Blueprints</span>
+        <span class="tech-badge">Lumen</span>
+        <span class="tech-badge">Nanite</span>
+        <span class="tech-badge">Niagara VFX</span>
+        <span class="tech-badge">Enemy AI</span>
+        <span class="tech-badge">Level Design</span>
+        <span class="tech-badge">HUD / UI</span>
+        <span class="tech-badge">Materials</span>
+        <span class="tech-badge">Post Processing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+
+      <!-- Project 1: Third Person Shooter -->
+      <div class="project-card featured" id="proj1">
+        <div class="project-content">
+          <div class="project-info">
+            <div class="project-number">01</div>
+            <div class="project-tags">
+              <span class="proj-tag">Unreal Engine 5</span>
+              <span class="proj-tag">C++</span>
+              <span class="proj-tag">AI Systems</span>
+              <span class="proj-tag">Blueprints</span>
+            </div>
+            <h3 class="project-title">Third-Person Shooter Game</h3>
+            <p class="project-desc">
+              A full-featured third-person shooter built in Unreal Engine with advanced AI enemies, 
+              dynamic combat mechanics, and polished game systems. Features enemy detection, chasing, 
+              and attacking behaviors driven by behavior trees.
+            </p>
+            <ul class="project-features">
+              <li>
+                <span class="feat-icon">⚡</span>
+                <span>AI behavior: detection, chasing, and attacking systems</span>
+              </li>
+              <li>
+                <span class="feat-icon">🎮</span>
+                <span>Shooting mechanics & full player control system</span>
+              </li>
+              <li>
+                <span class="feat-icon">🖥️</span>
+                <span>UI: health bar, HUD, and game menu screens</span>
+              </li>
+              <li>
+                <span class="feat-icon">🎬</span>
+                <span>Animation integration & collision detection</span>
+              </li>
+              <li>
+                <span class="feat-icon">🔧</span>
+                <span>Performance optimization for smooth gameplay</span>
+              </li>
+            </ul>
+          </div>
+          <div class="project-gallery" id="shooterGallery">
+            <div class="gallery-main">
+              <img src="images/screenshot4.jpg" alt="Third-person shooter game - enemies in slum environment" class="gallery-img active" id="galleryImg1" />
+              <img src="images/screenshot3.jpg" alt="Third-person shooter - player in slum village" class="gallery-img" id="galleryImg2" />
+              <div class="gallery-overlay">
+                <span class="gallery-label">TPS Game — Unreal Engine 5</span>
+              </div>
+            </div>
+            <div class="gallery-thumbs">
+              <div class="thumb active" onclick="switchGallery(0, 'shooterGallery')" id="thumb1">
+                <img src="images/screenshot4.jpg" alt="View 1" />
+              </div>
+              <div class="thumb" onclick="switchGallery(1, 'shooterGallery')" id="thumb2">
+                <img src="images/screenshot3.jpg" alt="View 2" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Environment Design -->
+      <div class="project-card" id="proj2">
+        <div class="project-content reverse">
+          <div class="project-info">
+            <div class="project-number">02</div>
+            <div class="project-tags">
+              <span class="proj-tag">Level Design</span>
+              <span class="proj-tag">Lumen</span>
+              <span class="proj-tag">Nanite</span>
+              <span class="proj-tag">Environment Art</span>
+            </div>
+            <h3 class="project-title">Environment & Level Design</h3>
+            <p class="project-desc">
+              Photorealistic 3D environment and level design showcasing mastery of Unreal Engine's 
+              next-gen rendering pipeline. Built immersive, atmospheric game levels with advanced 
+              Lumen global illumination and Nanite geometry.
+            </p>
+            <ul class="project-features">
+              <li>
+                <span class="feat-icon">🌍</span>
+                <span>Detailed 3D environments with realistic atmosphere</span>
+              </li>
+              <li>
+                <span class="feat-icon">💡</span>
+                <span>Lumen lighting for dynamic global illumination</span>
+              </li>
+              <li>
+                <span class="feat-icon">🏔️</span>
+                <span>Nanite for cinematic-quality geometry detail</span>
+              </li>
+              <li>
+                <span class="feat-icon">✨</span>
+                <span>Immersive and atmospheric game world design</span>
+              </li>
+            </ul>
+          </div>
+          <div class="project-gallery" id="envGallery">
+            <div class="gallery-main">
+              <img src="images/screenshot1.jpg" alt="Slum environment - open field with fence" class="gallery-img active" id="galleryImg3" />
+              <img src="images/screenshot2.jpg" alt="Slum environment - wooden buildings" class="gallery-img" id="galleryImg4" />
+              <img src="images/screenshot5.jpg" alt="Slum environment - rooftop view" class="gallery-img" id="galleryImg5" />
+              <div class="gallery-overlay">
+                <span class="gallery-label">Environment Design — Lumen + Nanite</span>
+              </div>
+            </div>
+            <div class="gallery-thumbs">
+              <div class="thumb active" onclick="switchGallery(0, 'envGallery')" id="thumb3">
+                <img src="images/screenshot1.jpg" alt="View 1" />
+              </div>
+              <div class="thumb" onclick="switchGallery(1, 'envGallery')" id="thumb4">
+                <img src="images/screenshot2.jpg" alt="View 2" />
+              </div>
+              <div class="thumb" onclick="switchGallery(2, 'envGallery')" id="thumb5">
+                <img src="images/screenshot5.jpg" alt="View 3" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Journey</span>
+        <h2 class="section-title">Experience & Education</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item left">
+          <div class="timeline-dot red"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <span class="tl-badge work">Work</span>
+              <span class="tl-date">Jan 2026 — Apr 2026</span>
+            </div>
+            <h3 class="tl-title">Game Development Intern</h3>
+            <h4 class="tl-company">Malger Entertainments · Ernakulam, Kerala</h4>
+            <ul class="tl-points">
+              <li>Developed gameplay systems using Blueprints and C++</li>
+              <li>Created interactive environments and level designs</li>
+              <li>Worked on Unreal Engine–based real-time projects</li>
+              <li>Optimized assets for better performance</li>
+              <li>Collaborated with team members during development</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <span class="tl-badge edu">Education</span>
+              <span class="tl-date">Aug 2025</span>
+            </div>
+            <h3 class="tl-title">Degree — Game Development (Unreal Engine)</h3>
+            <h4 class="tl-company">Malger Entertainments · Ernakulam, Kerala</h4>
+            <p class="tl-desc">Specialized training in Unreal Engine game development, covering gameplay systems, C++, Blueprints, level design, and real-time rendering.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <span class="tl-badge edu">Education</span>
+              <span class="tl-date">Jul 2018</span>
+            </div>
+            <h3 class="tl-title">Senior Secondary (Commerce)</h3>
+            <h4 class="tl-company">NIOS · Ernakulam, Kerala</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Offer</span>
+        <h2 class="section-title">Services</h2>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card" id="svc1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <h3>Gameplay System Development</h3>
+          <p>Building robust gameplay systems including player controllers, combat mechanics, shooting systems, inventory, and interaction frameworks using C++ and Blueprints.</p>
+          <div class="service-tags">
+            <span>C++</span><span>Blueprints</span><span>UE5</span>
+          </div>
+        </div>
+
+        <div class="service-card featured" id="svc2">
+          <div class="service-badge">Most Popular</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v4M12 16h.01"/>
+            </svg>
+          </div>
+          <h3>AI Behavior Systems</h3>
+          <p>Designing and implementing intelligent enemy AI using Behavior Trees and Blackboards — including patrol, detection, chasing, and attack sequences for engaging gameplay.</p>
+          <div class="service-tags">
+            <span>Behavior Trees</span><span>Enemy AI</span><span>Blackboards</span>
+          </div>
+        </div>
+
+        <div class="service-card" id="svc3">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3>3D Environment & Level Design</h3>
+          <p>Crafting immersive, atmospheric 3D game environments with advanced Lumen global illumination, Nanite geometry, Niagara VFX, materials, and post-processing effects.</p>
+          <div class="service-tags">
+            <span>Lumen</span><span>Nanite</span><span>Niagara</span>
+          </div>
+        </div>
+
+        <div class="service-card" id="svc4">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <h3>UI / HUD Development</h3>
+          <p>Creating clean and responsive in-game UI — health bars, ammo counters, minimaps, main menus, pause screens, and interactive HUD elements using UMG in Unreal Engine.</p>
+          <div class="service-tags">
+            <span>UMG</span><span>HUD</span><span>Game Menus</span>
+          </div>
+        </div>
+
+        <div class="service-card" id="svc5">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Optimization & Debugging</h3>
+          <p>Profiling and optimizing game projects for smooth performance — LOD management, draw call reduction, blueprint optimization, and systematic debugging.</p>
+          <div class="service-tags">
+            <span>Profiling</span><span>LOD</span><span>Debugging</span>
+          </div>
+        </div>
+
+        <div class="service-card" id="svc6">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <h3>Blueprint Prototyping</h3>
+          <p>Rapid prototyping of game ideas and mechanics using Blueprints for fast iteration — turning concepts into playable demos to validate gameplay loops quickly.</p>
+          <div class="service-tags">
+            <span>Blueprints</span><span>Prototyping</span><span>Rapid Dev</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-sub">Open to internships, freelance work, and full-time opportunities.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3 class="contact-info-title">Let's Build Something Epic</h3>
+          <p class="contact-info-desc">Whether you have a game project in mind, need a passionate developer to join your team, or just want to talk game dev — I'd love to hear from you!</p>
+
+          <div class="contact-cards">
+            <a href="mailto:ssanjaykumarsm@gmail.com" class="contact-card" id="emailCard">
+              <div class="cc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span class="cc-label">Email</span>
+                <span class="cc-value">ssanjaykumarsm@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+917560942995" class="contact-card" id="phoneCard">
+              <div class="cc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.26a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+              </div>
+              <div>
+                <span class="cc-label">Phone</span>
+                <span class="cc-value">+91 7560942995</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/sanjay-kumar070/" target="_blank" class="contact-card" id="linkedinCard">
+              <div class="cc-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div>
+                <span class="cc-label">LinkedIn</span>
+                <span class="cc-value">sanjay-kumar070</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/_____sa_nj_ay_____/" target="_blank" class="contact-card" id="instaCard">
+              <div class="cc-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </div>
+              <div>
+                <span class="cc-label">Instagram</span>
+                <span class="cc-value">_____sa_nj_ay_____</span>
+              </div>
+            </a>
+            <div class="contact-card location-card" id="locationCard">
+              <div class="cc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <span class="cc-label">Location</span>
+                <span class="cc-value">Kerala, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+            <h3>Send a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Your Name</label>
+                <input type="text" id="contactName" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Your Email</label>
+                <input type="email" id="contactEmail" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" placeholder="Project Collaboration / Job Opportunity" required />
+            </div>
+            <div class="form-group">
+              <label for="contactMsg">Message</label>
+              <textarea id="contactMsg" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width" id="submitBtn">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="nav-logo">
+            <span class="logo-bracket">&lt;</span>SK<span class="logo-bracket">/&gt;</span>
+          </span>
+          <p>Entry-Level Unreal Engine Developer crafting immersive game experiences from Kerala, India.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links-col">
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/in/sanjay-kumar070/" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/_____sa_nj_ay_____/" target="_blank">Instagram</a>
+          <a href="mailto:ssanjaykumarsm@gmail.com">Email</a>
+          <a href="tel:+917560942995">Phone</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Sanjay Kumar SM. All rights reserved.</p>
+        <p>Designed & Built with ❤️ | Unreal Engine Game Developer</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
